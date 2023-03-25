@@ -1,3 +1,4 @@
+import 'package:booking_tickets/utilis/app_layout.dart';
 import 'package:booking_tickets/utilis/app_style.dart';
 import 'package:booking_tickets/widget/thick_container.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class TicketView extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: SizedBox(
         width: MediaQuery.of(context).size.width * 0.85,
-        height: 200,
+        height: AppLayout.getHeight(177),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           margin: const EdgeInsets.only(left: 16),
@@ -42,7 +43,11 @@ class TicketView extends StatelessWidget {
                           ),
                         ),
                         const Spacer(),
-                        const ThickContainer(),
+                        isColor == null
+                            ? const ThickContainer()
+                            : const ThickContainer(
+                                isColor: false,
+                              ),
                         Expanded(
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -91,7 +96,11 @@ class TicketView extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const ThickContainer(),
+                        isColor == null
+                            ? const ThickContainer()
+                            : const ThickContainer(
+                                isColor: false,
+                              ),
                         const Spacer(),
                         Text(
                           'LDN',
@@ -201,10 +210,6 @@ class TicketView extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   color: isColor == null ? Colors.orange : Colors.white,
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(10),
-                    bottomRight: Radius.circular(10),
-                  ),
                 ),
                 child: Column(
                   children: [
