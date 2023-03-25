@@ -1,3 +1,4 @@
+import 'package:booking_tickets/utilis/app_layout.dart';
 import 'package:booking_tickets/utilis/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -12,16 +13,18 @@ class HotelScreen extends StatelessWidget {
       margin: const EdgeInsets.only(right: 17, top: 5),
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17),
       decoration: BoxDecoration(
-          color: Colors.purple, borderRadius: BorderRadius.circular(20)),
+        color: Colors.purple,
+        borderRadius: BorderRadius.circular(20),
+      ),
       width: MediaQuery.of(context).size.width * 0.6,
       height: 350,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            height: 200,
+            height: AppLayout.getHeight(200),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(AppLayout.getHeight(10)),
               color: const Color(0xFF687daf),
               image: DecorationImage(
                 image: AssetImage(

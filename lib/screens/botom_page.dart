@@ -1,4 +1,6 @@
 import 'package:booking_tickets/screens/home_screens.dart';
+import 'package:booking_tickets/screens/search_screen.dart';
+import 'package:booking_tickets/screens/ticket_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -10,8 +12,7 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  
-  int isSelected = 0;
+  int isSelected = 2;
   void onTapped(int index) {
     setState(() {
       isSelected = index;
@@ -20,8 +21,8 @@ class _BottomBarState extends State<BottomBar> {
 
   final List<Widget> widgetList = const <Widget>[
     HomeScreen(),
-    Text(''),
-    HomeScreen(),
+    SearchScreen(),
+    TicketScreen(),
     Text('')
   ];
   @override
@@ -41,7 +42,7 @@ class _BottomBarState extends State<BottomBar> {
           BottomNavigationBarItem(
             icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
             activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
-            label: "Ticket",
+            label: 'Ticket',
           ),
           BottomNavigationBarItem(
             icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
