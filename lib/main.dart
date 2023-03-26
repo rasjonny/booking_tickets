@@ -6,17 +6,11 @@ void main() {
   runApp(
     MaterialApp(
       title: 'Flutter Demo',
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.blueGrey,
-        indicatorColor: const Color.fromARGB(255, 60, 136, 173),
-      ),
+     
       theme: ThemeData(
-        brightness: Brightness.dark,
         primarySwatch: Colors.blue,
         primaryColor: primary,
       ),
-      themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       home: const BottomBar(),
     ),

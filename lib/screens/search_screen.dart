@@ -9,6 +9,7 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFeeedf2),
       body: ListView(
         children: [
           const Gap(40),
@@ -19,7 +20,6 @@ class SearchScreen extends StatelessWidget {
             child: Text(
               'What are\n you looking for?',
               style: Styles.headlineStyle1.copyWith(
-                color: Colors.white,
                 fontSize: AppLayout.getHeight(35),
               ),
             ),
@@ -27,7 +27,6 @@ class SearchScreen extends StatelessWidget {
           FittedBox(
             child: Container(
               decoration: const BoxDecoration(
-                color: Colors.white,
                 borderRadius: BorderRadius.all(
                   Radius.circular(10),
                 ),
@@ -38,22 +37,24 @@ class SearchScreen extends StatelessWidget {
                   Container(
                     width: MediaQuery.of(context).size.width * 0.44,
                     decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 4, 1, 1),
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
-                    child: Text(
-                      'AirLineTickets',
-                      style:
-                          Theme.of(context).textTheme.headlineSmall?.copyWith(
-                                color: Colors.white,
-                                fontSize: 15,
-                              ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Text(
+                        'AirLineTickets',
+                        style:
+                            Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                  fontSize: 15,
+                                  color: const Color.fromARGB(255, 60, 77, 61),
+                                ),
+                      ),
                     ),
                   ),
                   Text(
                     'Hotels',
                     style: Styles.headlineStyle3.copyWith(
-                      color: Colors.black,
+                      color: const Color.fromARGB(255, 60, 77, 61),
                     ),
                   )
                 ],
@@ -63,15 +64,17 @@ class SearchScreen extends StatelessWidget {
           const Gap(20),
           Container(
             decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 51, 18, 18),
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
             child: Row(
               children: [
-                const Icon(Icons.flight_takeoff_outlined),
+                const Icon(
+                  Icons.flight_takeoff_outlined,
+                  size: 80,
+                ),
                 Text(
                   'Arrival',
-                  style: Styles.headlineStyle3,
+                  style: Styles.headlineStyle4,
                 )
               ],
             ),
@@ -79,12 +82,14 @@ class SearchScreen extends StatelessWidget {
           const Gap(20),
           Container(
             decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 51, 18, 18),
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
             child: Row(
               children: [
-                const Icon(Icons.flight_land_outlined),
+                const Icon(
+                  Icons.flight_land_outlined,
+                  size: 80,
+                ),
                 Text(
                   'Departure',
                   style: Styles.headlineStyle4,

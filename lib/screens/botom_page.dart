@@ -1,4 +1,5 @@
 import 'package:booking_tickets/screens/home_screens.dart';
+import 'package:booking_tickets/screens/profile_screen.dart';
 import 'package:booking_tickets/screens/search_screen.dart';
 import 'package:booking_tickets/screens/ticket_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
@@ -12,7 +13,7 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  int isSelected = 2;
+  int isSelected = 3;
   void onTapped(int index) {
     setState(() {
       isSelected = index;
@@ -23,7 +24,7 @@ class _BottomBarState extends State<BottomBar> {
     HomeScreen(),
     SearchScreen(),
     TicketScreen(),
-    Text('')
+    ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -40,23 +41,47 @@ class _BottomBarState extends State<BottomBar> {
         showSelectedLabels: false,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
+            icon: Icon(
+              FluentSystemIcons.ic_fluent_home_regular,
+              color: Color.fromARGB(255, 51, 39, 35),
+            ),
+            activeIcon: Icon(
+              FluentSystemIcons.ic_fluent_home_filled,
+              color: Color.fromARGB(255, 51, 39, 35),
+            ),
             label: 'Ticket',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_search_filled),
+            icon: Icon(
+              FluentSystemIcons.ic_fluent_search_regular,
+              color: Color.fromARGB(255, 51, 39, 35),
+            ),
+            activeIcon: Icon(
+              FluentSystemIcons.ic_fluent_search_filled,
+              color: Color.fromARGB(255, 51, 39, 35),
+            ),
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled),
+            icon: Icon(
+              FluentSystemIcons.ic_fluent_ticket_regular,
+              color: Color.fromARGB(255, 51, 39, 35),
+            ),
+            activeIcon: Icon(
+              FluentSystemIcons.ic_fluent_ticket_filled,
+              color: Color.fromARGB(255, 51, 39, 35),
+            ),
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_person_regular),
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled),
+            icon: Icon(
+              FluentSystemIcons.ic_fluent_person_regular,
+              color: Color.fromARGB(255, 51, 39, 35),
+            ),
+            activeIcon: Icon(
+              FluentSystemIcons.ic_fluent_person_filled,
+              color: Color.fromARGB(255, 51, 39, 35),
+            ),
             label: 'Profile',
           ),
         ],
